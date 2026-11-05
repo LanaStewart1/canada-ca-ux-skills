@@ -31,6 +31,12 @@ All skills share one severity scale (Critical, Major, Minor) and confidence tags
 The audit works best in the Claude desktop app with the built-in browser, which captures the
 exact English and French pages. Without it, the skills ask you to paste the page HTML.
 
+## Acknowledgements
+
+Thanks to [page-builder](https://github.com/quidampepin/page-builder) by
+[quidampepin](https://github.com/quidampepin). Ideas from that project shaped this suite,
+including the automated accessibility scan and the Top 5 fixes list with effort estimates.
+
 ## Suggest a change
 
 Open an **Issue** describing what the audit got wrong or what you'd like it to do, with the
