@@ -21,6 +21,11 @@ command runs a full page audit and produces a shareable report: an at-a-glance p
 All skills share one severity scale (Critical, Major, Minor) and confidence tags
 ([Seen], [Needs test], [Needs judgement]).
 
+## Background
+
+How and why this suite came together: [One prompt wasn't enough: what I learned building a
+page audit suite with AI](docs/one-prompt-wasnt-enough.md).
+
 ## Install
 
 1. Download the latest zip from **Releases** (right side of this page).
