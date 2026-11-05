@@ -6,7 +6,7 @@ description: "Audit English and French Canada.ca page pairs for parity, link lan
 # Canada.ca bilingual audit
 
 Audit one or more English/French Canada.ca page pairs and produce a neutral, actionable report
-for Government of Canada web teams. Adapted from a colleague's Copilot skill.
+for Government of Canada web teams. Adapted from Chelsey Donohue's Copilot skill.
 
 Write in Canadian English unless the user writes in French. Start directly with the report.
 

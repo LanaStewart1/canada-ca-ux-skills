@@ -11,7 +11,7 @@ First shared release of the suite.
 - **New skill: canada-ca-accessibility.** Automated axe-core scan, measured contrast and code
   checks, findings mapped to WCAG 2.1 AA success criteria, template issues kept separate, and a
   hands-on test script.
-- **canada-ca-bilingual-audit:** adapted from a colleague's Copilot skill. Captures pages in the
+- **canada-ca-bilingual-audit:** adapted from Chelsey Donohue's Copilot skill. Captures pages in the
   built-in browser, uses a plain-language results table, says where each finding sits on the
   page, and checks program names and structured data.
 - **canada-ca-ai-answer-check:** plain-language version with three questions answered Yes,

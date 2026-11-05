@@ -173,8 +173,7 @@ links go under "Links to verify".
 Make the report a shareable doc (use the Docs artifact type when available) unless the user
 asked for a different format. Structure:
 
-**Wording:** call the AI step "AI tools check" in the report ("AI Answer" is a product name
-for the user's team). Say "AI tools" in labels, headings and table cells. Don't call the
+**Wording:** call the AI step "AI tools check" in the report, never "AI Answer". Say "AI tools" in labels, headings and table cells. Don't call the
 review sections appendices or letter them; refer to a section by its name ("See UX review").
 Avoid grading jargon such as "capped by"; give the counts instead.
 
