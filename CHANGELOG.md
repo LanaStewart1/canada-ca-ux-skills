@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1 (November 5, 2026)
+
+- **canada-ca-feedback-analyst:** new Codebook mode that codes every comment against a general
+  GC Feedback taxonomy (Task × Issue type) that works on any service, tested on Express Entry,
+  the Canada child benefit, passport renewal and PHAC vaccine pages. It includes "Looking for
+  something this service doesn't offer" with a jurisdiction test, theme maturity statuses
+  following validation-first thematic measurement, redirect flags, and coding in any language.
+  Personal health details are now excluded, and comments suggesting risk to someone are flagged
+  separately, without quoting them.
+
 ## 1.0 (November 5, 2026)
 
 First shared release of the suite.
