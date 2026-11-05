@@ -44,10 +44,14 @@ test" instead of reported as fact.
 
 ### 2. Count with code, not with vibes
 
-A researcher I talked to was skeptical that AI can count feedback comments, because it stops
-reading closely partway through a long list. They were right. So the feedback skill now labels
-every comment by ID, counts them with a script, and keeps a table showing which comment went
-where. The same goes for sentence lengths: a script measures every sentence, and the report
+Researcher [Dr. Cody Dodd](https://github.com/codydodd) was skeptical that AI can count feedback
+comments, because it stops reading closely partway through a long list. He was right. His
+[validation-first thematic measurement](https://github.com/codydodd/validation-first-thematic-measurement)
+framework puts it simply: measurement follows validation. Automated theme tagging has to be
+checked against a sample a person has coded before anyone reports the numbers. So the feedback
+skill now labels every comment by ID, counts them with a script, keeps a table showing which
+comment went where, and says plainly whether the counts have been checked against a human-coded
+sample yet. The same goes for sentence lengths: a script measures every sentence, and the report
 charts it.
 
 ### 3. One scale for everything
@@ -81,7 +85,8 @@ colleague's skill and improve it, or start from the problem that annoys you most
 on a real page, check it against the source, and keep iterating.
 
 Thanks again to David, whose [page-builder](https://github.com/quidampepin/page-builder) started
-all this and shaped the accessibility scan and the fix list, and to Chelsey Donohue, whose
-bilingual audit skill I adapted.
+all this and shaped the accessibility scan and the fix list, to Chelsey Donohue, whose
+bilingual audit skill I adapted, and to Dr. Cody Dodd, whose push on validation changed how the
+suite counts.
 
 *This is a personal project, and the views here are my own.*
