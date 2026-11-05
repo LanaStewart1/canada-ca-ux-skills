@@ -44,7 +44,7 @@ test" instead of reported as fact.
 
 ### 2. Count with code, not with vibes
 
-Researcher [Dr. Cody Dodd](https://github.com/codydodd) was skeptical that AI can count feedback
+Researcher [Dr. Cody Dodd](https://github.com/codydodd) warned me about how GenAI counts feedback
 comments, because it stops reading closely partway through a long list. He was right. His
 [validation-first thematic measurement](https://github.com/codydodd/validation-first-thematic-measurement)
 framework puts it simply: measurement follows validation. Automated theme tagging has to be
