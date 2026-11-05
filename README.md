@@ -41,6 +41,10 @@ exact English and French pages. Without it, the skills ask you to paste the page
 Thanks to [page-builder](https://github.com/quidampepin/page-builder) by
 [quidampepin](https://github.com/quidampepin). Ideas from that project shaped this suite. Chelsey Donohue contributed the bilingual audit skill.
 
+The feedback analyst's measured counting and validation status follow the
+[validation-first thematic measurement](https://github.com/codydodd/validation-first-thematic-measurement)
+framework by [Dr. Cody Dodd](https://github.com/codydodd): measurement follows validation.
+
 ## Suggest a change
 
 Open an **Issue** describing what the audit got wrong or what you'd like it to do, with the
