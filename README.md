@@ -34,8 +34,7 @@ exact English and French pages. Without it, the skills ask you to paste the page
 ## Acknowledgements
 
 Thanks to [page-builder](https://github.com/quidampepin/page-builder) by
-[quidampepin](https://github.com/quidampepin). Ideas from that project shaped this suite,
-including the automated accessibility scan and the Top 5 fixes list with effort estimates.
+[quidampepin](https://github.com/quidampepin). Ideas from that project shaped this suite. Chelsey Donohue contributed the bilingual audit skill.
 
 ## Suggest a change
 
