@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2 (November 6, 2026)
+
+- **canada-ca-feedback-analyst:** codebook v1.7, after blind validation on passport renewal
+  (Apply and Can't find are now Trusted on that page type). New rules: "how do I" vs "can I"
+  for Apply and Learn; a comment that only states a task or asks a question is coded "Can't
+  find"; "Get a document or form"; information about an office is Learn; single words stay
+  Unknown; Technical error vs Unable to complete online. Adds a channel churn flag, and reports
+  "No usable content" exclusions as a share.
+- **New post:** [Counting feedback you can trust](docs/counting-feedback-you-can-trust.md).
+
 ## 1.1 (November 5, 2026)
 
 - **canada-ca-feedback-analyst:** new Codebook mode that codes every comment against a general

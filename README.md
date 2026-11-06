@@ -26,6 +26,9 @@ All skills share one severity scale (Critical, Major, Minor) and confidence tags
 How and why this suite came together: [One prompt wasn't enough: what I learned building a
 page audit suite with AI](docs/one-prompt-wasnt-enough.md).
 
+How the feedback analyst's codebook was built and tested: [Counting feedback you can trust:
+building a codebook for Canada.ca comments](docs/counting-feedback-you-can-trust.md).
+
 ## Install
 
 1. Download the latest zip from **Releases** (right side of this page).
