@@ -1,6 +1,6 @@
 ---
 name: "canada-ca-page-audit"
-description: "Run a full UX audit of a Canada.ca or GC page by chaining the UX, content, SEO, accessibility, feedback and job-story skills into one merged report. Use for \"audit this page\" or \"full UX audit\"."
+description: "Run a full UX audit of a Canada.ca or GC page, or a section of related pages, by chaining the UX, content, SEO, accessibility, feedback and job-story skills into one merged report. Use for \"audit this page\", \"audit this section\" or \"full UX audit\"."
 ---
 
 # Canada.ca page audit
@@ -14,6 +14,31 @@ Inputs:
 - **Required:** a page URL, or pasted HTML for the English and French pages (HTML-only mode)
 - **Optional:** a GC Feedback export, an earlier feedback analysis, an Adobe Analytics export,
   site search terms, call-centre data, AI citation monitor questions and results
+
+**Section mode.** Use it when the user asks for a section, a report spread over several pages
+(a budget, an annual report, a guide in chapters), or when the feedback lands on several pages
+of one set. If it's unclear, ask once: one page in depth, or the section as a whole.
+- **Scope:** list every page in the set from its table of contents or landing page, in English
+  and French. If the address given returns Not Found, find the set's real entry page, say so,
+  and report the bad address as a finding.
+- **Snapshot:** capture the entry page in full (Step 1). For every other page, fetch the exact
+  HTML in the browser and record: status, title, description, H1, H2 and H3 counts, word count,
+  tables, images without an alt attribute, PDF links, date modified, language toggle, canonical,
+  robots and snippet tags, and structured data. Check every anchor link in both tables of
+  contents against the destination's ids.
+- **Feedback:** code every comment, and add a topic column for the set's subject (for example
+  retirement savings, seniors, tax measures, report format). For the biggest topics, search the
+  pages' text to find where each one sits, so the report can say whether people can't find
+  something that is there, or are asking for something that isn't.
+- **Reviews:** judge the set as a whole: navigation between pages, whether the table of contents
+  reaches the level where people's topics sit, the PDF and search, and the same metadata and
+  accessibility checks across all pages. Run the axe scan on the entry page in both languages
+  and on 2 content pages (the most-commented and the one with the most images).
+- **Charts:** in place of the one-page sentence chart, chart the share of sentences over 20
+  words and the reading time for each page. Add a feedback topics chart, and a journey map from
+  the entry page to where the top topic sits.
+- **Report:** title it "<set name>: section audit". The scope line gives the number of pages in
+  each language. Every finding names the pages it applies to.
 
 ---
 
@@ -181,17 +206,16 @@ The report is one page, in this order, with a divider line (`---`) above each ma
 from Summary to Sources:
 
 1. **At-a-glance panel** (right under the title and byline), drawn as one diagram widget where
-   the doc supports it, otherwise a short table. Use colour tokens only, a title that states the
-   finding, and look at a screenshot before moving on. Don't repeat the panel's contents in the
-   prose below it.
+   the doc supports it, otherwise a short table. Use colour tokens only, and look at a screenshot
+   before moving on. The panel has no title line of its own: the finding box says it once.
+   Don't repeat the panel's contents in the prose below it.
    - **Grade box:** "Overall grade", the grade large, and the issue counts under it ("5 Major
      issues, 0 Critical"). The box is tinted and outlined by grade band: green for A, amber for
      B, red (critical) for C, D or F.
-   - **The finding:** one or two sentences in a plain box, the single thing a manager should
-     leave with.
-   - **Three AI tools cards:** Can AI tools find the page? Clear answer to copy? Do AI tools
-     repeat it correctly? Each Yes, Partly or No, with a green dot for Yes and amber for Partly
-     or No.
+   - **The finding:** the single thing a manager should leave with, in a plain box. A short
+     bold first line that a non-specialist gets in one read (who, what, how bad, with a number:
+     "The 3 things people want most are 2 or 3 clicks away:"), then one plain line naming
+     them. No jargon, no heuristics or check names, under about 20 words in all.
    - **Checks box:** one quiet box holding a row of coloured dots with names (not pills or
      chips, which read as clickable): Tasks · UX · Content · SEO · French · Links ·
      Accessibility · Outdated · AI tools. Under a thin rule inside the same box, the legend:

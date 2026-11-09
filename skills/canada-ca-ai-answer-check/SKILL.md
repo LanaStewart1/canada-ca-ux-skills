@@ -42,7 +42,9 @@ as proposed.
 Use a browser tool to capture the exact page: main text, headings, metadata, structured data,
 date modified, and whether the main text is in the page's HTML (not loaded later by script).
 Capture the French page too. Open the site's `robots.txt` and note any rules for AI or search
-crawlers. Record exactly what the file says; don't guess what each crawler does.
+crawlers. Record exactly what the file says; don't guess what each crawler does. Note any
+snippet controls: a robots meta tag or `X-Robots-Tag` header with `noindex`, `nosnippet` or
+`max-snippet`, and any `data-nosnippet` attribute on page sections.
 
 ---
 
@@ -52,10 +54,18 @@ crawlers. Record exactly what the file says; don't guess what each crawler does.
 
 Look for:
 - **Not blocked:** robots.txt and the page's own tags don't stop AI or search tools from reading it.
+- **Snippets allowed:** Google shows a page in AI Overviews and AI Mode only if it's indexed and
+  allowed to show a snippet. `noindex` or `nosnippet` on the page, a very low `max-snippet`, or
+  `data-nosnippet` around a key section keeps that content out. Rate it Critical when it covers
+  a top task's answer, unless the page owner chose it on purpose (then report it, as with
+  robots.txt).
 - **Text in the page:** the key facts are written in the page itself, not only in a PDF, an image,
   or content that loads later.
 - **People's words:** the title, heading and intro use the words people actually ask with (from
-  monitor questions or site search), not only the program's official name.
+  monitor questions or site search), not only the program's official name. This helps readers
+  and Canada.ca site search. Google says its AI features understand synonyms and don't need
+  pages rewritten for AI, so don't rate a missing everyday term above Minor on search grounds
+  alone.
 - **One main page:** the page points to itself as the main version, and no other GC page competes
   to answer the same question.
 
@@ -77,8 +87,10 @@ Look for:
   French version all say the same thing. A contradiction is the most likely cause of a wrong AI
   answer.
 - **Sections that make sense alone:** each section names what it's about in its first sentence,
-  because AI tools often quote one passage, not the whole page. (Later mentions in the same section
-  can still say "the program", as the Style Guide recommends.)
+  because readers skim and some AI tools quote one passage, not the whole page. (Later mentions in
+  the same section can still say "the program", as the Style Guide recommends.) Google says it
+  doesn't need content split into chunks and has no ideal page length, so don't recommend
+  splitting pages or shortening them for AI.
 - **Conditions kept with the facts:** limits and exceptions sit in the same sentence or list as the
   fact they limit, not in a footnote or another section.
 - **Accurate hidden data:** any structured data matches the visible page and is current. FAQ
@@ -108,7 +120,11 @@ These conflict with GC neutrality, the Style Guide, or the evidence:
 - promotional, boastful or "authoritative" tone
 - repeating keywords or rotating synonyms for their own sake
 - hidden text, or content written for AI tools but not for people
-- untested files or tags (for example llms.txt) presented as effective
+- llms.txt or any "AI" markup or schema: Google says it doesn't use them, so they won't help or
+  harm Google visibility; other tools' use is unproven
+- splitting a page into smaller pages, or rewriting it with keyword variations, for AI tools
+- adding structured data for AI: there's no special schema for AI features (accurate structured
+  data still helps rich results)
 - blocking or unblocking AI crawlers: report what robots.txt says; that decision belongs to the
   site owner and policy, not this review
 
@@ -135,6 +151,10 @@ For the top 3 findings, give a test the user can run in the AI citation monitor:
 - Re-run after the fix is published and the page has had a few weeks to be re-read by search and
   AI tools (say when the page was updated).
 - Results vary between runs and platforms, so compare patterns, not single answers.
+- For Google, also compare the page in Search Console's Generative AI performance report, for
+  the same weeks before and after. It's Google's own data on how the page shows in AI features;
+  name it as a second source beside the monitor. Don't rely on third-party tools that claim to
+  see Google's ranking or AI systems: none can.
 
 ---
 

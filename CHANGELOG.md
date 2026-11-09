@@ -1,5 +1,25 @@
 # Changelog
 
+## 2.0 (November 9, 2026)
+
+- **canada-ca-page-audit:** new section mode, to audit a report or set of related pages as a
+  whole (snapshot of every page in both languages, feedback topics by page, a reading-time and
+  sentence-length chart per page, and a journey map to where the top topic sits). The
+  at-a-glance panel has no title line, a plain bold finding with a number, and no AI tools cards.
+- **ux-reviewer:** asks the stage first (sketch, prototype or live page) and adjusts the review;
+  adds a two-second first glance (does the eye land on the top task?); no grade for early
+  designs.
+- **canada-ca-ai-answer-check:** new "Snippets allowed" check; Search Console's Generative AI
+  performance report added to the test plan; llms.txt, AI-only markup and splitting pages for AI
+  are on the "do not recommend" list, in line with Google's AI optimization guide.
+- **canada-ca-seo:** checks indexing and snippet controls; new section mode with one table of
+  proposed descriptions and keywords for every page.
+- **canada-ca-bilingual-audit:** new section mode that compares the structure of every English
+  and French pair, then checks the entry page and the most-commented pages in full.
+- **canada-ca-feedback-analyst:** v1.12 (codebook v1.8): on report pages a one-word topic is
+  coded Learn; a topic column and topic-by-page table for sections.
+- **README:** the suite audits a single page or a section.
+
 ## 1.2 (November 6, 2026)
 
 - **canada-ca-feedback-analyst:** codebook v1.7, after blind validation on passport renewal

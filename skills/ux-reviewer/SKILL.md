@@ -16,7 +16,18 @@ impact, not aesthetic preference.
 
 A page is judged by where it sends people, not only by what it shows.
 
-1. **Fetch the live page.** Never review from memory.
+0. **Know the stage.** Is this a live page, or a design still being worked on (a sketch,
+   wireframe, mockup or prototype, for example a Figma screen built from the GC Design Library)?
+   If the user hasn't said and it isn't obvious, ask in one line. The stage sets the review:
+   - **Exploration** (sketches, early wireframes): no grade. Give the first glance, the top
+     task, and at most five directional notes on structure and task flow. Skip pixel-level,
+     copy-editing and code checks.
+   - **Refinement** (detailed mockups, clickable prototypes): the full framework and findings,
+     with a provisional grade marked "design stage". Accessibility checks that need code
+     become [Needs test].
+   - **Live page**: the full review below, with the steps that follow.
+1. **Fetch the live page.** Never review from memory. (For a design, review exactly what the
+   user shared, and say so.)
 2. **Identify the page type.** Hub, campaign, topic, or landing pages exist to route users.
    Transactional pages and forms exist to complete a task. Content pages exist to answer a question.
 3. **For hub, campaign, topic, and landing pages: follow the primary calls to action one level.**
@@ -32,6 +43,10 @@ A page is judged by where it sends people, not only by what it shows.
    same alerts and dates. Missing or outdated content in one language is a finding.
 5. **Name the top user tasks** the page should serve before evaluating. Use known top-task data
    if the user provides it; otherwise state your assumed tasks explicitly so they can be corrected.
+6. **Take the two-second first glance.** Before reading closely, note what the eye lands on
+   first (the largest, highest-contrast or highest element above the fold) and whether it
+   is the top task. If the first thing seen isn't the top task, or the top task isn't visible
+   without scrolling or opening something, that's a finding under task completion.
 
 ---
 
@@ -256,6 +271,8 @@ Within those caps, use judgement:
   Design appears built for internal needs, not user needs.
 
 Be a harsh grader — most real-world products sit in the B–C range. State which cap applied.
+Don't grade an exploration-stage design. Mark a refinement-stage grade "design stage": it
+may change once the build can be tested.
 
 ---
 
@@ -263,7 +280,8 @@ Be a harsh grader — most real-world products sit in the B–C range. State whi
 
 ### 1. Summary verdict
 Two to three sentences. What is the overall quality, and what is the single most important
-problem?
+problem? Then one line: **First glance:** what the eye lands on first, and whether it is the
+top task. State the stage reviewed if it isn't a live page.
 
 ### 2. Score
 Letter grade (A+ to F), with the cap that applied (if any).

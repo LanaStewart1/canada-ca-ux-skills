@@ -16,6 +16,14 @@ Write in Canadian English unless the user writes in French. Start directly with 
 - **Called from canada-ca-page-audit:** use the audit's snapshot (`mainHtml` for English and
   French, date modified, link-follow data). Don't re-fetch. Skip the page-code check (the
   accessibility skill covers WCAG) and return findings on the audit's shared severity scale.
+- **Section mode** (a set of pages, alone or from a page audit section audit): first compare
+  the structure of every English and French pair: status, H2 and H3 counts, tables, images,
+  links, PDF links, the language toggle in both directions, and whether every anchor in each
+  table of contents exists on its destination. Then compare the titles of every pair, and
+  look into any pair whose counts differ to find what's different. Run the five checks in
+  full only on the entry page and the 2 pages with the most feedback (or, without feedback,
+  the 2 most visited). Report the structure comparison as one line per difference, not one
+  row per page, and say which pages got the full check.
 
 ## Step 1: Get the exact HTML
 

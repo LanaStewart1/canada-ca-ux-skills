@@ -1,14 +1,6 @@
 ---
-name: canada-ca-seo
-description: >
-  Use this skill whenever the user wants to generate, review, or improve SEO metadata
-  (title tags, meta descriptions, keywords) or structured data (JSON-LD schema.org markup)
-  for Canada.ca or Government of Canada web pages. Trigger on any mention of: meta tags,
-  meta description, keywords, structured data, schema.org, JSON-LD, rich snippets, SERP,
-  SEO for Canada.ca, findability, or dcterms metadata. Also trigger when the user shares
-  a Canada.ca URL and asks for SEO improvements, or pastes HTML from a GC page and asks
-  about metadata or search optimization. Always use this skill even if the user just says
-  "write me metadata for this page" or "add structured data" in a Canada.ca context.
+name: "canada-ca-seo"
+description: "Use this skill whenever the user wants to generate, review, or improve SEO metadata (title tags, meta descriptions, keywords) or structured data (JSON-LD schema.org markup) for Canada.ca or Government of Canada web pages. Trigger on any mention of: meta tags, meta description, keywords, structured data, schema.org, JSON-LD, rich snippets, SERP, SEO for Canada.ca, findability, or dcterms metadata. Also trigger when the user shares a Canada.ca URL and asks for SEO improvements, or pastes HTML from a GC page and asks about metadata or search optimization. Always use this skill even if the user just says \"write me metadata for this page\" or \"add structured data\" in a Canada.ca context."
 ---
 
 # Canada.ca SEO: Metadata & Structured Data
@@ -26,6 +18,10 @@ If the user provides a Canada.ca URL, use the `web_fetch` tool to retrieve its c
 - The main body text (headings, paragraphs, lists)
 - Any Q&A or step-by-step content (for structured data)
 - The page's purpose: Is it a service page? FAQ? How-to? Event? Announcement?
+- Indexing and snippet controls: a robots meta tag or `X-Robots-Tag` with `noindex`, `nosnippet`
+  or `max-snippet`, `data-nosnippet` on any section, and the canonical link. A page must be
+  indexed and allowed a snippet to appear in Google's AI Overviews and AI Mode, so flag any of
+  these that cover the page's main answer and ask whether it was intended.
 
 If no URL is provided, ask the user to paste the page content or HTML.
 
@@ -131,6 +127,26 @@ Then note: what schema was chosen and why, and any fields left out because the c
 If no structured data is warranted (e.g., a simple institutional landing page with no clear schema fit), explain why and suggest what content additions could unlock structured data in the future.
 
 ---
+
+## Section mode (several pages at once)
+
+When the user gives a set of pages (a report in chapters, a section, the pages a
+canada-ca-page-audit section audit captured), don't write a full metadata block for each.
+Produce one table, in English and in French, ready to hand to the page owner:
+
+| Page | Current title | Current description | Proposed description | Keywords |
+
+- **Proposed description:** the same rules as above (130 characters at most, the page's own
+  content, no keyword lists). Name the 2 or 3 things people most look for on that page, taken
+  from feedback topics or site search terms when they're available, otherwise from its
+  headings. Write the French one from the French page, not as a translation of the English.
+- **Keywords:** the same rules as above, drawn first from the words people used in feedback
+  and site search, including common misspellings and abbreviations ("RRIF", "RIF", "REER").
+- **Flag**, under the table: descriptions that are identical or follow one template across
+  pages, titles over 60 characters, and any page with `noindex`, `nosnippet`, `max-snippet` or
+  a missing canonical.
+- Structured data: give one corrected JSON-LD example only if the same fix applies to every
+  page, and say so.
 
 ## Interaction rules
 

@@ -7,7 +7,7 @@ description: "Use this skill whenever the user provides user feedback, comments,
 Title: Feedback summary and theme analysis
 Owner: Canada.ca Experience Office
 Prompt ID: FB-SUM-001
-Version: 1.11
+Version: 1.12
 Sensitivity: Unclassified
 Human Review Required: Yes
 Last Updated: 2026-11-05
@@ -18,6 +18,7 @@ Change in 1.8: codebook v1.4 ("No usable content" exclusions reported as a share
 Change in 1.9: codebook v1.5 after the first blind validation (passport renewal, Nov 6, 2026): "Get a document or form"; "how do I" vs "can I" rule for Apply and Learn; a task statement or question is coded "Can't find", not "Not stated"; information about an office is Learn, not Contact.
 Change in 1.10: codebook v1.6 adds a channel churn flag (another channel used for help, or because the online path failed), counted across all tasks.
 Change in 1.11: codebook v1.7 after the second blind batch (passport renewal): when a comment says what the site did (bounced out, won't move to the next step, kicked out), it's Technical error, not Unable to complete online; Apply and Can't find are Trusted on program information and application pages.
+Change in 1.12: codebook v1.8: on report and publication pages a one-word topic is Learn, with the topic in `detail`; a `topic` column for sections of several pages.
 ---
 
 # Role
@@ -197,7 +198,7 @@ to someone (flagged, not quoted)" with no text.
 
 ---
 
-# Codebook (general taxonomy v1.7)
+# Codebook (general taxonomy v1.8)
 
 The codebook works on any GC page or service. Service-specific detail (program names, account
 terms such as GCKey, PAC, passcode grid, partner banks, security questions) goes in the
@@ -267,7 +268,11 @@ One Issue type per comment. When several match, the lowest priority number wins.
 - **One-word or fragment comments** that point to a task are coded to that task ("Phone number"
   is Contact; "Form" is Get a document or form). A single word that names a topic but no task ("Chicken" on the
   food guide, which could be about nutrition or a recall) stays Unknown: don't guess the task
-  from the page's subject.
+  from the page's subject. The exception is a **report or publication page** (a budget, an
+  annual report, a plan, a chapter of a guide), where the only thing someone can do is read
+  what it says about a topic: there a one-word topic ("RRSP", "Seniors") is Learn, with the
+  topic in `detail`, and the issue follows the Can't find convention. Say in Analysis
+  Confidence when this rule was used.
 - **No usable content:** exclude comments with nothing to code: empty or "no", keyboard
   mashing, repeated letters or words, jokes, insults, spam and messages unrelated to any task.
   Use the exclusion reason "No usable content". A general complaint that is about the page or
@@ -449,6 +454,14 @@ program or rule. When several pages or services are coded together, add one colu
 the Share figures so they can be compared. The coding table for Codebook mode has the columns
 `comment_id` · `page` · `task` · `other_tasks` · `issue_type` · `issue_detail` · `detail` ·
 `churn` · `excluded` · `exclusion_reason` · `gloss` · `comment_text`.
+
+When the comments come from a section of several pages (a report in chapters, a set of
+related pages), add a `topic` column after `detail`: a short list of 5 to 8 subject groups
+drawn from the comments themselves (for example "Retirement savings", "Seniors and pensions",
+"Report format and navigation"), with "Other topics" for groups under 3 comments. Report the
+topic counts as a third Codebook Results table, and a cross-table of topic by page. Topics are
+service-specific detail, so they never replace the Task and Issue type codes and start as Not
+yet validated.
 
 Produce all sections in the output language determined under Language Handling.
 
