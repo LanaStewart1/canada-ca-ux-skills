@@ -190,7 +190,7 @@ When asked to assess content (without rewriting it):
    sentences over 20 words, paragraphs over three sentences, lists over seven items. A
    Flesch-Kincaid grade may be added as context only, labelled as a rough indicator (2.1).
 6. List findings as a table: **Section · Issue · Current · Suggested**, most important first.
-   When used inside a page audit, also tag each finding Critical, Major or Minor and [Seen] or
+   When used inside a page audit, also tag each finding Critical, Major or Minor and [Confirmed] or
    [Needs test].
 
 ## HTML output (WET/BOEW)

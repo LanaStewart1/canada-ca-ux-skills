@@ -174,7 +174,7 @@ skill used on its own:
 High / Medium / Low from other tools map to Critical / Major / Minor.
 
 And one confidence tag:
-- **[Seen]**: confirmed in the snapshot's exact source
+- **[Confirmed]**: confirmed in the snapshot's exact source
 - **[Needs test]**: not confirmable from the snapshot; goes in the "To verify in browser" list
 - **[Needs judgement]**: a person must decide (for example, a possible meaning change in
   translation); report it as a finding, but it can't set the grade cap on its own
@@ -186,13 +186,32 @@ links go under "Links to verify".
 
 ## Step 5: Merge and grade
 
-1. **Merge duplicates.** The same underlying problem found by several skills is one issue.
-   List every skill that found it. Keep the highest severity.
-2. **Rank** by severity, then by how many users the affected task covers (use measured comment
-   counts or analytics when available; approximate shares can break ties but are labelled).
-3. **Grade** with the ux-reviewer caps: any Critical → C+ or lower; two or more → D or lower;
+Each skill proposes its own fixes, next to its evidence. This step is where they become one
+set of recommendations. The feedback analyst stays evidence only: use its counts here, never
+ask it for fixes.
+
+1. **Merge duplicates.** The same underlying problem found by several skills is one issue
+   (a missing "Apply online" link found by the UX review, the content review and the service
+   check is one fix). List every skill that found it in Found by. Keep the highest severity
+   and the most specific fix.
+2. **Resolve conflicts.** When fixes from different skills pull against each other on the
+   same text or element (SEO wants a keyword in the title, plain language wants it shorter,
+   accessibility wants link text that makes sense on its own), write one fix that meets all
+   of them and say so in Why. If no wording can, give the trade-off in one line and put
+   accessibility and official languages first, then the user's task, then findability.
+3. **Rank by impact.** Order by severity, then by how many people the affected task covers
+   (measured comment share, or analytics when provided; approximate shares can break ties but
+   are labelled), then by effort: within the same severity, a Small fix goes before a Large
+   one.
+4. **Split by owner.** Tag each fix Page fix (the web team can do it now) or Service fix
+   (needs the program, IT or policy). In the Top 5, page fixes come first within the same
+   severity, so the team has something to act on now; a Critical service fix still goes to
+   the top.
+5. **Show the reasoning.** For any fix that merged findings or resolved a conflict, Why says
+   so in one clause ("Found by UX, Content and Service; shorter title keeps the keyword").
+6. **Grade** with the ux-reviewer caps: any Critical → C+ or lower; two or more → D or lower;
    three or more Major with no Critical → B- or lower; A requires no Critical or Major.
-4. **Compare with the previous audit** if one was found: mark each top issue as New, Still open
+7. **Compare with the previous audit** if one was found: mark each top issue as New, Still open
    or Fixed. A Critical issue still open since the last audit lowers the grade one step below its
    cap. Report the comparison only in Follow-up checks ("Since the October audit: 4 still open,
    1 new, 0 fixed"), never in the summary or the fixes table.
@@ -236,7 +255,8 @@ from Summary to Sources:
    - grade line: the grade, the issue counts, the page's last-modified date
    - scope in one line ("Captured Nov 4, 2026 · English and French · no feedback or
      analytics data"); how and when each page was captured goes in Sources
-   - **Top 5 fixes** as a table: # · Fix · Why · Severity · Effort (estimate) · Found by.
+   - **Top 5 fixes** as a table: # · Fix · Why · Severity · Effort (estimate) · Owner · Found
+     by, in the order from Step 5. Owner is a chip (Page fix, Service fix).
      Severity is a colour-coded dropdown chip (Critical, Major, Minor) where the doc supports
      it. Effort is Small, Medium or Large, also a chip, with a note under the table that effort
      is an estimate for the page owner to confirm, and why any Large one is Large (for example,
@@ -249,8 +269,7 @@ from Summary to Sources:
 5. **UX review**, with the journey map drawn as a diagram where the doc supports it. Then
    **Service experience**: the service journey diagram, what happens at each stage (Can people
    do it? and Action needed), the clicks and hand-offs table and the service gaps to fix, with
-   the owner column (page fix or service fix). In the Top 5 fixes, add the
-   owner to the Found by cell when it's a service fix.
+   the owner column (page fix or service fix).
 6. **Content review** (English), with the sentence-length chart (see Charts) under the
    measurable checks.
 7. **Metadata and findability**.

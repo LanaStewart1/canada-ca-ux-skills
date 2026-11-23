@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.1 (November 23, 2026)
+
+- **All skills:** the confidence tag [Seen] is now [Confirmed], so it reads plainly in reports.
+  The other tags ([Needs test], [Needs judgement]) are unchanged. Updated in page audit, UX
+  reviewer, writer, accessibility, bilingual audit, AI answer check and service experience.
+- **canada-ca-page-audit:** the merge step is now where recommendations come together. It
+  merges duplicate fixes found by several skills, resolves conflicts between them (for example
+  SEO, plain language and accessibility on the same title), ranks by severity, reach and effort,
+  and tags each fix as a page fix or a service fix. The Top 5 fixes table gets an Owner column.
+  The feedback analyst stays evidence only.
+- **canada-ca-service-experience:** treats the sign-in page as an evidence wall. It names the
+  account the service uses (My Service Canada Account, CRA My Account and others), marks stages
+  that happen inside it as "Inside the account: not seen" instead of guessing, flags "Account
+  mentioned" comments, and uses sign-out feedback, call reasons, analytics or testing when
+  available. A new Inside the account section lists which sources exist and which are missing;
+  no evidence at all becomes a service gap.
+
 ## 3.0 (November 23, 2026)
 
 - **canada-ca-service-experience:** new skill. Follows each task from the Canada.ca entry page

@@ -88,7 +88,7 @@ Use the suite's shared scale:
 | Major | Any other factual difference between English and French (including a different program name); likely to confuse or slow the task; a WCAG failure that doesn't block |
 | Minor | Polish, style, minor wording or consistency |
 
-Confidence: **[Seen]** clearly in the markup; **[Needs test]** only a browser or hands-on
+Confidence: **[Confirmed]** clearly in the markup; **[Needs test]** only a browser or hands-on
 check can confirm; **[Needs judgement]** a person must decide (for example, whether a
 translation changes the meaning).
 

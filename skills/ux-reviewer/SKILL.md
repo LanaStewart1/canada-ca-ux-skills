@@ -240,7 +240,7 @@ Apply when the page is on Canada.ca or another GC site:
 Page-reading tools often return a summary, not the raw source. Do not present a guess as a fact.
 Tag every finding with one of:
 
-- **[Seen]** — directly observed in the page content, source, or screenshot
+- **[Confirmed]** — directly observed in the page content, source, or screenshot
 - **[Needs test]** — cannot be confirmed from what you fetched (e.g. alt text, presence of
   a JavaScript-loaded widget, contrast, keyboard order, mobile layout). Say what test would
   confirm it.
@@ -295,7 +295,7 @@ arrows, not decoration. If no visual tool is available, give a short text path
 
 ### 4. Findings
 Each finding must include:
-- **What**: the specific issue, described precisely, with its [Seen] or [Needs test] tag
+- **What**: the specific issue, described precisely, with its [Confirmed] or [Needs test] tag
 - **Why it matters**: the user impact — who is affected and how
 - **Heuristic / framework**: which evaluation lens this maps to
 - **Recommendation**: a concrete, actionable fix

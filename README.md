@@ -21,7 +21,7 @@ and a section for each review.
 | `canada-ca-feedback-analyst` | Measured theme analysis of GC Feedback comments, when an export is provided, with topics by page for a section. |
 
 All skills share one severity scale (Critical, Major, Minor) and confidence tags
-([Seen], [Needs test], [Needs judgement]).
+([Confirmed], [Needs test], [Needs judgement]).
 
 ## Background
 

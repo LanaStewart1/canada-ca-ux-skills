@@ -29,7 +29,7 @@ success criterion (SC) for every finding, e.g. "1.4.3 Contrast (Minimum), AA".
 | Major | An A or AA failure on a top-task path that slows or confuses but doesn't block: body-text contrast failure, broken heading structure in the main content, vague link text on a task link, a table with no headers |
 | Minor | An A or AA failure off the task path, or a low-impact one (for example, duplicate ids) |
 
-Confidence tags: **[Seen]** measured by the scan or script, or seen in the code;
+Confidence tags: **[Confirmed]** measured by the scan or script, or seen in the code;
 **[Needs test]** only a hands-on check can confirm; **[Needs judgement]** depends on meaning
 (is this alt text good enough? is this link clear in context?).
 
@@ -60,7 +60,7 @@ JSON.stringify({ violations: r.violations.map(v => ({ id: v.id, impact: v.impact
   needsReview: r.incomplete.map(v => ({ id: v.id, nodes: v.nodes.length })) });
 ```
 
-Violations are [Seen]. "needsReview" items are [Needs test] or [Needs judgement], never
+Violations are [Confirmed]. "needsReview" items are [Needs test] or [Needs judgement], never
 failures by themselves.
 
 ## Step 3: Code and contrast checks (always run)

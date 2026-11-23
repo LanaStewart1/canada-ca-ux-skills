@@ -133,7 +133,7 @@ These conflict with GC neutrality, the Style Guide, or the evidence:
 ## Confidence
 
 Tag each finding:
-- **Seen:** confirmed in the captured page
+- **Confirmed:** confirmed in the captured page
 - **Needs test:** needs a check in a browser or search console
 - **Needs judgement:** a person needs to decide
 

@@ -54,6 +54,14 @@ panel, and stop. Never invent service gaps for an information page.
    and say which source each number comes from.
 3. **Routes for each stage:** online, in person, by mail, by phone, through an agent or
    representative, and who each route is for (each route's own rules).
+4. **Which account, and what happens inside it.** Name the account the service uses, if any
+   (My Service Canada Account, CRA My Account, an IRCC account, GCKey or a Sign-In Partner,
+   or another), and which stages the public pages say happen inside it. GC Feedback runs
+   only on public pages, so there is usually no feedback from inside an account. While
+   coding the feedback, flag each comment that mentions the account ("in my account", "my
+   account says", "can't upload", sign-in or lockout problems) as **Account mentioned**: these
+   come from people who left the account to look for help, and are the only GC Feedback
+   signal about it.
 
 ## Step 2: Walk the journey
 
@@ -71,6 +79,22 @@ sites). Record:
 
 Stop at sign-in pages, payment pages and form submission. Never sign in, create an account,
 book, pay or submit anything. What happens beyond that point is [Needs test].
+
+The sign-in page is an **evidence wall**. For any stage that happens mostly inside the
+account, score only what the public pages show, and mark the stage **Inside the account: not
+seen**. Never score it Yes or No on what happens in the account without evidence from one
+of these sources, each named with its date when used:
+- **Sign-out or exit feedback** from the account (for example, the MSCA sign-out survey)
+- **Account mentioned** comments from the public pages' GC Feedback
+- **Call-centre reasons** for people who called after trying online
+- **Analytics** from inside the account, if it's tagged (drop-off by step, trips back to
+  public pages)
+- **Sign-in errors and lockouts**, if the account team shares them
+- **Usability testing** with a test account, run by the service team
+
+If none of these is available for a stage that lives in the account, that is itself a
+gap: "No evidence from inside <account> for this service." Its owner is a service fix, and
+the fix is getting one of the signals above in place for this service.
 
 ## Step 3: Score each stage
 
@@ -161,6 +185,8 @@ On the shared scale:
    - a small bar for its share of GC Feedback comments, with the percentage
    - a coloured flag and a 2-line friction note in plain words ("No online route: phone or
      mail"), or what works for a green stage
+   - when the service uses an account: a dashed vertical line at Sign in labelled "Evidence
+     ends here", and a dashed outline on each stage marked Inside the account: not seen
 
    A legend under the line: red = no route, amber = friction, green = works, and what the bar
    measures (comments from people who answered No). The title states where the friction is
@@ -179,22 +205,25 @@ On the shared scale:
    answered No, so they show friction, not what everyone came to do, and that click data
    would show that. Then a bar chart of comments by stage in journey order, the stage with the
    most friction in the accent colour, and one line per stage on what people asked for.
-4. **Clicks and hand-offs to start each task:** a table with Stage and route · Who it's for ·
+4. **Inside the account** (only when the service uses one): one line naming the account and
+   which stages happen in it, then a short table: Source · Available? · What it says, by
+   stage. List every source from Step 2, including the missing ones, so the gaps are visible.
+   End with the one source that would most improve the next audit.
+5. **Clicks and hand-offs to start each task:** a table with Stage and route · Who it's for ·
    Clicks to start · Hand-offs · Works on a phone · Where it starts (link).
-5. **Service gaps to fix:** # · Gap · Stage · Severity · Confidence · Owner · Effort · Fix.
+6. **Service gaps to fix:** # · Gap · Stage · Severity · Confidence · Owner · Effort · Fix.
    Start each Gap cell with a bold short name of 3 to 6 words ("Status only by phone"), then
-   the evidence below it. Confidence is one of: **Confirmed on the page** (checked on the live
-   page and quoted), **Needs judgement** (the evidence is clear, but the program needs to say
-   whether it's an error) or **Needs test** (behind a sign-in, a submission or a letter). A gap
-   can combine two ("Confirmed on the page; letter wording Needs test"). Put a one-line key
-   explaining the three under the table.
-   Start each Gap cell with a bold short name of 3 to 6 words ("Status only by phone"), then
-   the evidence below it.
-6. **What works:** patterns other services could reuse (for example, a status link for every
+   the evidence below it. Confidence uses the suite's shared tags: **[Confirmed]** (checked on
+   the live page and quoted), **[Needs judgement]** (the evidence is clear, but the program
+   needs to say whether it's an error) or **[Needs test]** (behind a sign-in, a submission or
+   a letter). A gap can combine two ("[Confirmed]; letter wording [Needs test]"). Put a
+   one-line key explaining the three under the table.
+7. **What works:** patterns other services could reuse (for example, a status link for every
    route, published wait times), with their page.
-7. **Measures to track:** the stage shares from the comments, the share of "Looking for
+8. **Measures to track:** the stage shares from the comments, the share of "Looking for
    something this service doesn't offer", the churn rate, "Unable to complete online"
-   comments, phone wait times against the standard, and task completion and ease from GC TSS
+   comments, Account mentioned comments, sign-out feedback by stage where it exists, phone
+   wait times against the standard, and task completion and ease from GC TSS
    where it runs. Add analytics measures when available (clicks from the entry page to the
    application or account, exits from each stage).
 
