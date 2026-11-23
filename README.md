@@ -12,6 +12,7 @@ and a section for each review.
 | `canada-ca-page-audit` | Runs the skills below in order on one capture of the page, or of every page in a section, and merges them into one report. Start here. |
 | `job-stories-writer` | Writes the user tasks the audit measures everything against (audit mode). |
 | `ux-reviewer` | UX review with a journey map and grading rules. |
+| `canada-ca-service-experience` | Follows each service task (learn, sign in, apply, update, check status, contact) to where it starts, and shows where the friction is, with page fixes and service fixes. |
 | `canada-ca-writer` | Content review against the Canada.ca Content Style Guide, with measured sentence lengths. |
 | `canada-ca-seo` | Title, description, keywords and structured data, or one table of proposed descriptions for a whole section. |
 | `canada-ca-bilingual-audit` | English and French parity, link language, outdated content, French clarity, page by page or across a section. |

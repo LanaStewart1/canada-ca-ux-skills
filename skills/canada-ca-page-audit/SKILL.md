@@ -151,6 +151,12 @@ Run each against the snapshot and the task list:
    footer, breadcrumb, feedback widget) separate from page issues; they never set the grade
    cap. If no browser is available, it can't run: the Accessibility check is grey ("not
    checked") and the summary says so.
+7. **canada-ca-service-experience**: "called from canada-ca-page-audit" mode, on the snapshot,
+   link-follow data, task list and feedback. It follows the top task to where it starts,
+   scores each stage (Learn, Sign in, Apply, Update, Check status, Contact), and tags each
+   gap as a page fix or a service fix.
+   If it says the page isn't a service journey (a report, a policy statement), the Service
+   check is grey ("not applicable") and the report has no Service experience section.
 
 ---
 
@@ -217,13 +223,13 @@ from Summary to Sources:
      "The 3 things people want most are 2 or 3 clicks away:"), then one plain line naming
      them. No jargon, no heuristics or check names, under about 20 words in all.
    - **Checks box:** one quiet box holding a row of coloured dots with names (not pills or
-     chips, which read as clickable): Tasks · UX · Content · SEO · French · Links ·
+     chips, which read as clickable): Tasks · UX · Service · Content · SEO · French · Links ·
      Accessibility · Outdated · AI tools. Under a thin rule inside the same box, the legend:
      amber = issues found, green = no issues (and grey = not checked, when any check is grey).
      Never green a check that couldn't run; Accessibility is green only when the scan and
      script both ran and found nothing. A check's colour must match what its section says.
 2. **Contents line**, under the panel: "**Contents:** Summary · User tasks · UX review ·
-   Content review · Metadata and findability · Bilingual audit · AI tools check ·
+   Service experience · Content review · Metadata and findability · Bilingual audit · AI tools check ·
    Accessibility · Follow-up checks · Sources". Plain text: a one-page doc can't link to its
    own headings.
 3. **Summary** (no wording about previous audits here):
@@ -240,7 +246,11 @@ from Summary to Sources:
    - what's working
    - one priority next step
 4. **User tasks**: job stories, scenarios with answers, user need statements.
-5. **UX review**, with the journey map drawn as a diagram where the doc supports it.
+5. **UX review**, with the journey map drawn as a diagram where the doc supports it. Then
+   **Service experience**: the service journey diagram, what happens at each stage (Can people
+   do it? and Action needed), the clicks and hand-offs table and the service gaps to fix, with
+   the owner column (page fix or service fix). In the Top 5 fixes, add the
+   owner to the Found by cell when it's a service fix.
 6. **Content review** (English), with the sentence-length chart (see Charts) under the
    measurable checks.
 7. **Metadata and findability**.

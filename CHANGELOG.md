@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.0 (November 23, 2026)
+
+- **canada-ca-service-experience:** new skill. Follows each task from the Canada.ca entry page
+  to where it actually starts, and scores six stages named after the codebook tasks: Learn,
+  Sign in, Apply, Update, Check status and Contact. The report opens with a service journey
+  diagram showing where the friction is, then each stage with "Can people do it?" and "Action
+  needed", what GC Feedback tells us (with a note that comments come only from people who
+  answered No), clicks and hand-offs to start each task, and service gaps to fix, each tagged
+  as a page fix or a service fix. Tested on Passport and the Canada Disability Benefit.
+- **canada-ca-page-audit:** runs the service experience check when the page is a service
+  journey, with a Service card in the audit panel and a Service experience section. Reports
+  and budgets get a grey "not applicable".
+
 ## 2.0 (November 9, 2026)
 
 - **canada-ca-page-audit:** new section mode, to audit a report or set of related pages as a
